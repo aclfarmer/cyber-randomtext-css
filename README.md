@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# React Animation Link
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+This repository contains a React component (AnimationLink) that adds a hacking-style animation effect to links when hovered. The animation effect is implemented using the AnimationHackEffect component.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+Follow these steps to integrate the animated link component into your React project:
+Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have React and React Router installed in your project:
 
-### `npm run build`
+```bash
+npm install react react-dom react-router-dom
+```
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone this repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/aclfarmer/cyber-randomtext-css.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Copy the AnimationLink.js and AnimationHack.js files into your project.
+Import the AnimationLink component in your desired React component:
 
-### `npm run eject`
+```jsx
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+import AnimationLink from './path/to/AnimationLink';
+```
+Use the AnimationLink component in your JSX:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx
+<AnimationLink
+  targetId={'yourLinkId'}
+  to={'/your-route'}
+  dataValue={'Click here to experience the animation'}
+/>
+```
+## Example Usage
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>
+);
+```
+```jsx
+// App.js
+import React from 'react';
+import './App.css';
+import AnimationLink from './AnimationLink';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <AnimationLink
+          targetId={'appHackLink'}
+          to={''}
+          dataValue={'Click here to connect to the cyberspace'}
+        />
+        <p>Hover over the text to trigger the animation.</p>
+      </header>
+    </div>
+  );
+}
 
-## Learn More
+export default App;
+```
+## Components
+## AnimationLink
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The main component that provides an animated link.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    targetId: The ID of the target element.
+    to: The destination URL for the link.
+    dataValue: The text to be displayed in the link.
+    icon (optional): Icon class for the link.
+    onMouseEnter (optional): Callback function triggered on mouse enter.
+    onMouseLeave (optional): Callback function triggered on mouse leave.
+    isExternal (optional): Boolean indicating whether the link is external.
 
-### Code Splitting
+## AnimationHackEffect
+The component responsible for the hacking-style animation effect.
+Props
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    targetElementId: The ID of the target element to be animated.
+    dataValue: The original text content of the target element.
+    isAnimating: Boolean indicating whether the animation is active.
+    setIsAnimating: Function to set the animation state.
