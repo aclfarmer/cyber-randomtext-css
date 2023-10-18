@@ -81,7 +81,6 @@ export default App;
 ```
 
 The main component that provides an animated link.
-Props.
     -**targetId:**  The ID of the target element.
     -**to:**  The destination URL for the link.
     -**dataValue:**  The text to be displayed in the link.
