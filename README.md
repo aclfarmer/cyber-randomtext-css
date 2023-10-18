@@ -95,7 +95,8 @@ The main component that provides an animated link.
 ## AnimationHackEffect
 The component responsible for the hacking-style animation effect.
 Props
-   **targetElementId:** The ID of the target element to be animated.
-   **dataValue:**  The original text content of the target element.
-   **isAnimating:**  Boolean indicating whether the animation is active.
-   **setIsAnimating:**  Function to set the animation state.
+
+    targetElementId: The ID of the target element to be animated.
+    dataValue: The original text content of the target element.
+    isAnimating: Boolean indicating whether the animation is active.
+    setIsAnimating: Function to set the animation state.
