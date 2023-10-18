@@ -84,13 +84,13 @@ export default App;
 The main component that provides an animated link.
 
 Props
-    -**targetId:**  The ID of the target element.
-    -**to: **  The destination URL for the link.
-    -**dataValue:**  The text to be displayed in the link.
-    -**icon (optional):**  Icon class for the link.
-    -**onMouseEnter (optional):**  Callback function triggered on mouse enter.
-    -**onMouseLeave (optional):**  Callback function triggered on mouse leave.
-    -**isExternal (optional):**  Boolean indicating whether the link is external.
+    **targetId:**  The ID of the target element.
+    **to: **  The destination URL for the link.
+    **dataValue:**  The text to be displayed in the link.
+    **icon (optional):**  Icon class for the link.
+    **onMouseEnter (optional):**  Callback function triggered on mouse enter.
+    **onMouseLeave (optional):**  Callback function triggered on mouse leave.
+    **isExternal (optional):**  Boolean indicating whether the link is external.
 
 ## AnimationHackEffect
 
