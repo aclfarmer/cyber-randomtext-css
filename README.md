@@ -81,7 +81,6 @@ export default App;
 ```
 ## Components
 ## AnimationLink
-
 The main component that provides an animated link.
     * **targetId:**  The ID of the target element.
     * **to:**  The destination URL for the link.
