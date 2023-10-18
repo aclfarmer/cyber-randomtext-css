@@ -80,24 +80,24 @@ function App() {
 export default App;
 ```
 ## Components
-## AnimationLink ##
+## AnimationLink
 The main component that provides an animated link.
-Props
 
-    **  targetId: **  The ID of the target element.
-    **  to: **  The destination URL for the link.
-    **  dataValue: **  The text to be displayed in the link.
-    ** icon (optional): **  Icon class for the link.
-    ** onMouseEnter (optional): **  Callback function triggered on mouse enter.
-    ** onMouseLeave (optional): **  Callback function triggered on mouse leave.
-    ** isExternal (optional): **  Boolean indicating whether the link is external.
+Props
+    -**targetId:**  The ID of the target element.
+    -**to: **  The destination URL for the link.
+    -**dataValue:**  The text to be displayed in the link.
+    -**icon (optional):**  Icon class for the link.
+    -**onMouseEnter (optional):**  Callback function triggered on mouse enter.
+    -**onMouseLeave (optional):**  Callback function triggered on mouse leave.
+    -**isExternal (optional):**  Boolean indicating whether the link is external.
 
 ## AnimationHackEffect
 
 The component responsible for the hacking-style animation effect.
-Props
 
-   ** targetElementId: ** The ID of the target element to be animated.
-   ** dataValue: **  The original text content of the target element.
-   ** isAnimating: **  Boolean indicating whether the animation is active.
-   ** setIsAnimating: **  Function to set the animation state.
+Props
+   -**targetElementId:** The ID of the target element to be animated.
+   -**dataValue:**  The original text content of the target element.
+   -**isAnimating:**  Boolean indicating whether the animation is active.
+   -**setIsAnimating:**  Function to set the animation state.
