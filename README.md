@@ -80,8 +80,7 @@ function App() {
 export default App;
 ```
 ## Components
-## `AnimationLink`
-
+## AnimationLink
 The main component that provides an animated link.
 Props
     - **  targetId**  The ID of the target element.
@@ -92,7 +91,7 @@ Props
     - ** onMouseLeave (optional): **  Callback function triggered on mouse leave.
     - ** isExternal (optional): **  Boolean indicating whether the link is external.
 
-## `AnimationHackEffect`
+## AnimationHackEffect
 
 The component responsible for the hacking-style animation effect.
 Props
